@@ -8,4 +8,5 @@ url = 'http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/310120?r
 resp = requests.get(url=url)
 data = json.loads(resp.text)
 
-print (data)
+if('SiteRep' in data):
+    print(data)
